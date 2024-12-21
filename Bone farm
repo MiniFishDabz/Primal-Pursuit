@@ -15,6 +15,7 @@ wait(3)
     }
 
     game:GetService("ReplicatedStorage").Remotes.QuestClaim:FireServer(unpack(questNames))
+    local value = game:GetService("Players").LocalPlayer:findFirstChild("Bones").Value
 
    wait(1)
    game.Players.LocalPlayer:Kick("Bones: "..tostring(value))
