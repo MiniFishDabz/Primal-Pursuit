@@ -22,5 +22,5 @@ wait(3)
     local value = game:GetService("Players").LocalPlayer:findFirstChild("Bones").Value
 
    wait(1)
-   game.Players.LocalPlayer:Kick("Total Bones: "..tostring(value).. " If you see an exploit kick don't worry")
+   game.Players.LocalPlayer:Kick("Total Bones: "..tostring(value).. " If you see an exploit kick don't worry!")
    game:GetService("TeleportService"):Teleport(game.PlaceId)
