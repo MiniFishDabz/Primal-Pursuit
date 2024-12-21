@@ -16,6 +16,6 @@ wait(3)
 
     game:GetService("ReplicatedStorage").Remotes.QuestClaim:FireServer(unpack(questNames))
 
-   wait(0.2)
+   wait(1)
    game.Players.LocalPlayer:Kick("Bones: "..tostring(value))
    game:GetService("TeleportService"):Teleport(game.PlaceId)
