@@ -1,10 +1,20 @@
 repeat task.wait()
 until game:IsLoaded() and game:GetService("Players").LocalPlayer:findFirstChild("Bones")
-wait(3)
+wait(0.5)
       queueonteleport(game:HttpGet("https://raw.githubusercontent.com/MiniFishDabz/Primal-Pursuit/refs/heads/main/Bone%20farm", true))
 
-    game:GetService("ReplicatedStorage").Remotes.QuestClaim:FireServer("survival5")
-       local value = game:GetService("Players").LocalPlayer:findFirstChild("Bones").Value
+    local questNames = {
+    "dhunter1", "dhunter2", "dhunter3", "dhunter4", 
+    "dmonster1", "dmonster2", "dmonster3", "dmonster4", 
+    "dsurvival1", "dsurvival2", "dsurvival3", "dsurvival4", 
+    "whunter1", "wmonster1", "wsurvival1", "mechanic", 
+    "monster1", "monster2", "monster3", "monster4", "monster5", 
+    "hunter1", "hunter2", "hunter3", "hunter4", "hunter5", 
+    "survival1", "survival2", "survival3", "survival4", "survival5", 
+    "selfmedicated", "fighttosurvive1", "fighttosurvive2"
+    }
+
+    game:GetService("ReplicatedStorage").Remotes.QuestClaim:FireServer(unpack(questNames))
 
    wait(0.2)
    game.Players.LocalPlayer:Kick("Bones: "..tostring(value))
