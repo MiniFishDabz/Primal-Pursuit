@@ -14,7 +14,11 @@ wait(3)
     "selfmedicated", "fighttosurvive1", "fighttosurvive2"
     }
 
-    game:GetService("ReplicatedStorage").Remotes.QuestClaim:FireServer(unpack(questNames))
+    for _, quest in ipairs(questNames) do
+    local args = { [1] = quest }
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("QuestClaim"):FireServer(unpack(args))
+    end
+    
     local value = game:GetService("Players").LocalPlayer:findFirstChild("Bones").Value
 
    wait(1)
